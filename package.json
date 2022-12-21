@@ -2,7 +2,6 @@
   "name": "movie",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:tojonir/movie-back.git",
   "author": "tojonir",
   "license": "MIT",
   "dependencies": {
