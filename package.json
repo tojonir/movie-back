@@ -14,7 +14,8 @@
     "@prisma/client": "^4.4.0"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "webpack --config webpack.js --watch"
   },
   "devDependencies": {
     "@babel/register": "^7.18.9",
