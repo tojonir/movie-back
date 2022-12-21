@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URI")
+}
+
+model movies {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String @unique
+  description String
+  image String?
+  genre String?
+  type String?
+  cast String?
+  country String?
+  producer String?
+  release String?
+}
+
+model User {
+  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+  email String  @unique
+  name  String?
+}
+
+model comment {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  movie String
+  user String
+  parrentComment String
+  content String
+}
+
+model like {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  user String
+  parrentId String
+}
